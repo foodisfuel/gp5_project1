@@ -1,0 +1,69 @@
+:root{
+    --primary-color:rgba(87, 161, 124, 0.8);
+}
+
+.top-bar{
+    background-color:var(--primary-color);
+}
+
+.menu-text{
+    background-color:var(--primary-color);
+}
+
+a {
+    background-color:var(--primary-color);
+    color: black;
+}
+
+.top-bar-right{
+    background-color:var(--primary-color);
+}
+
+.menu li {
+    background-color:var(--primary-color);
+}
+
+.jumbotron {
+    /*Image from https://wallpapersafari.com/w/SFrsbG*/
+    background-image: url("../images/SFrsbG.jpg");
+    background-size: cover;
+}
+
+
+/*-------form styling--------------*/
+.translucent-form-overlay {
+    max-width: 500px;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 20px;
+    color: #fefefe;
+    margin: 60px;
+  }
+  
+  .translucent-form-overlay .columns.row {
+    display: block;
+  }
+  
+  .translucent-form-overlay h3, .translucent-form-overlay label {
+    color: #fefefe;
+  }
+  
+  .translucent-form-overlay input, .translucent-form-overlay select {
+    color: #8a8a8a;
+  }
+  
+  .translucent-form-overlay input::-webkit-input-placeholder {
+    color: #8a8a8a;
+  }
+  
+  .translucent-form-overlay input:-ms-input-placeholder {
+    color: #8a8a8a;
+  }
+  
+  .translucent-form-overlay input::placeholder {
+    color: #8a8a8a;
+  }
+  
+.footer {
+    background-color: var(--primary-color);
+}
