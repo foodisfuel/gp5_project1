@@ -17,15 +17,15 @@ var healthInputEl = document.querySelector('');
 // CALORIE AMOUNT FROM FORM *
 var calInputEl = document.querySelector('');
 
-// VARIABLES FOR SHOWCASE/RECIPE SECTION *
+// VARIABLE FOR ENTIRE SHOWCASE/RECIPE SECTION *
 var recipeContainerEl = document.querySelector('');
 
-// function to get user input from form, or assist them complete it
+// function to get user input from form, OR PROVIDE AN ALERT TO HELP WITH COMPLETION
 var formSubmitHandler = function(event) {
     // prevent page from reloading when submit button is clicked
     event.preventDefault();
 
-    // GET THE USER'S SEARCH INPUT, IS TRIM NEEDED HERE? ***
+    // GET THE USER'S SEARCH INPUT, IS .TRIM() NEEDED HERE? ***
     var searchTerm = searchInputEl.value.trim();
     // if user submitted a searchTerm, pass it as an argument to getRecipes 
     if (searchTerm) {
@@ -37,19 +37,15 @@ var formSubmitHandler = function(event) {
         alert('Please enter a food you would like to include in your recipe!');
     }
 
-    // GET THE USER'S MEAL INPUT
+    // GET THE USER'S INPUT
     var mealLabel = mealInputEl.value();
-    // SEND TO getRecipes FUNCTION
+    // SEND  VALUE TO getRecipes FUNCTION
     getRecipes(mealLabel);
 
-    // GET THE USER'S HEALTH INPUT
     var healthLabel = healthInputEl.value();
-    // SEND TO getRecipes FUNCTION
     getRecipes(healthLabel);
 
-    // GET THE USER'S CALORIE INPUT
     var calLabel = calInputEl.value();
-    // SEND TO getRecipes FUNCTION
     getRecipes(calLabel);
 };
 
@@ -61,7 +57,7 @@ var getRecipes = function(food, meal, health, calories) {
         // request was successful
         if (response.ok) {
             response.json().then(function(data) {
-                displayRecipes(data);
+                displayRecipes(data, food, meal, health, calories);
             });            
         } else {
             // request was unsuccessful 
@@ -132,4 +128,5 @@ var displayRecipes = function(recipes) {
 };
 
 // event listener for form submission
+// BUTTON TYPE SHOULD BE EQUALED TO 'SUBMIT'
 userFormEl.addEventListener('submit', formSubmitHandler);
