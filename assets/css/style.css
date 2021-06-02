@@ -65,10 +65,18 @@ a {
   }
 
   .main-section{
-    margin: 30px 0px;
+    padding: 30px 0px;
+    background-color:rgba(178, 209, 193, 0.8);
   }
 
-  .card-container{
-    max-width: 100%;
+
+  .card{
+    border:1px solid rgba(79, 80, 79, 0.8);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .card-divider{
+    border-bottom: 1px solid var(--primary-color);
   }
 
