@@ -25,16 +25,19 @@
         </div>
     </div>
     <!-- End Top Bar -->
+    <!-- Start of Jumbotron with input form-->
     <div class="grid-container fluid">
       <div class="grid-y jumbotron" style="height:650px;">
         <div class="translucent-form-overlay float-right">
           <form>
             <h3>Input Information</h3>
+            <!--Search by term -->
             <div class="row columns">
-              <label>Search Term
+              <label>Search Recipes
               <input id="search-term" type="text" name="search" placeholder="Searching by keyword">
               </label>
             </div>
+            <!--Meal Type dropdown -->
             <div class="row columns">
               <label>Meal Type
                 <select>
@@ -80,11 +83,13 @@
                   </label>
                 </div>
               </div>
+              <!--Calorie requirements -->
               <div class="row ">
-                <label class="columns small-12">Required Calories</label>
+                <label class="columns small-12">Required Calories (Input maximum desired calories per serving)</label>
                 <div class="columns small-6">
                   <input id="calories" type="number" min="0" name="min" placeholder="kcal">
                 </div>
+                <!--Form Submit button -->
                 <div class="row columns">
                   <div class="columns">
                     <button id="submit" type="button" class="primary button search-button">
@@ -98,46 +103,56 @@
       </div>
     </div>
     <!--Main section content-->
-    <div id="main" class="grid-container fluid">
-      <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-        <div class="cell">
+    
+      <div id="main" class="grid-x main-section">
+      <div class="row small-up-2 medium-up-3 card-container">
+        <div class="column">
           <div class="card">
-            <img src="assets/img/generic/rectangle-1.jpg">
-              <div class="card-section">
-                <h4>This is a row of cards.</h4>
-                <p>This row of cards is embedded in an X-Y Block Grid.</p>
-              </div>
+            <img src="http://placehold.it/500X300" width = 100%>
+            <div class="card-divider">
+              This is a header
+            </div>
+            <div class="card-divider">
+              <h4>This is a card.</h4>
+              <p>This is some text</p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <img src="http://placehold.it/500X300" width = 100%>
+            <div class="card-divider">
+              This is a header
+            </div>
+            <div class="card-divider">
+              <h4>This is a card.</h4>
+              <p>This is some text</p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <img src="http://placehold.it/500X300" width = 100%>
+            <div class="card-divider">
+              This is a header
+            </div>
+            <div class="card-divider">
+              <h4>This is a card.</h4>
+              <p>This is some text</p>
+            </div>
           </div>
         </div>
       </div>  
-      <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-        <div class="cell">
-          <div class="card">
-            <img src="assets/img/generic/rectangle-1.jpg">
-              <div class="card-section">
-                <h4>This is a row of cards.</h4>
-                <p>This row of cards is embedded in an X-Y Block Grid.</p>
-              </div>
-          </div>
-        </div>
-      </div> 
-      <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-        <div class="cell">
-          <div class="card">
-            <img src="assets/img/generic/rectangle-1.jpg">
-              <div class="card-section">
-                <h4>This is a row of cards.</h4>
-                <p>This row of cards is embedded in an X-Y Block Grid.</p>
-              </div>
-          </div>
-        </div>
-      </div>       
-    </div>   
-           
+      </div>
     <!--Footer-->
-    <div class="cell shrink footer">
-    <h3> here is my footer</h3>
-    </div> 
+    <div class="top-bar"style="height:65px;">
+      <div class="top-bar-left">
+        
+      </div>
+      <div class="top-bar-right">
+        
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script>
