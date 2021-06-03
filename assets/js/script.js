@@ -52,7 +52,7 @@ var getRecipes = function () {
             response.json().then(function (data) {
                 var recipes = data;
                 console.log(recipes);
-                for (i = 0; i < recipes.hits.length; i++) {
+                for (i = 0; i < 9; i++) {
 
                     //create html elements
 
