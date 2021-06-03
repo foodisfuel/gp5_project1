@@ -76,6 +76,7 @@ var getRecipes = function () {
                     var linkText = document.createElement('p');
                     var instructionLink = document.createElement('a');
                     instructionLink.target = "_blank";
+                    instructionLink.textContent = "Instructions";
                     instructionLink.href = recipes.hits[i].recipe.url;
 
                     // append html elements
@@ -100,7 +101,8 @@ var getRecipes = function () {
 
                     // append link to instructions
 
-                    cardDividerTwo.appendChild(linkText)
+                    cardDividerTwo.appendChild(linkText);
+                    console.log()
 
                     // append divs to DOM
 
