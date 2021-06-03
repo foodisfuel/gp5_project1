@@ -1,178 +1,125 @@
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NUTRIQUOTIENT | Welcome</title>
-    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-  </head>
-  <body>
 
-    <!-- Start Top Bar -->
-    <div class="top-bar">
-        <div class="top-bar-left">
-          <ul class="menu">
-            <li class="menu-text">NUTRIQUOTIENT</li>
-          </ul>
-        </div>
-        <div class="top-bar-right">
-          <ul class="menu">
-            <li><a href="#">About Us</a></li>
-          </ul>
-        </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NUTRIQUOTIENT | Welcome</title>
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- Start Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="menu">
+        <li class="menu-text">NUTRIQUOTIENT</li>
+      </ul>
     </div>
-    <!-- End Top Bar -->
-    <!-- Start of Jumbotron with input form-->
-    <div class="grid-container fluid">
-      <div class="grid-y jumbotron" style="height:650px;">
-        <div class="translucent-form-overlay float-right">
-          <form id="input-form">
-            <h3>Recipe Search</h3>
-            <!--Search by term -->
-            <div class="row columns">
-              <label>Search Recipes</label>
-              <input name="search-input" id="search-input" type="text" placeholder="Searching by keyword (Required Field)" />
-            </div>
-            <!--Meal Type dropdown -->
-            <div class="row columns">
-              <label>Meal Type</label>
-              <select id="meal-input">
-                <option value="breakfast">Breakfast</option>
-                <option value="lunch">Lunch</option>
-                <option value="dinner">Dinner</option>
-                <option value="snack">Snack</option>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Top Bar -->
+  <!-- Start of Jumbotron with input form-->
+  <div class="grid-container fluid">
+    <div class="grid-y jumbotron" style="height:650px;">
+      <div class="translucent-form-overlay float-right">
+        <form id="input-form">
+          <h3>Recipe Search</h3>
+          <!--Search by term -->
+          <div class="row columns">
+            <label>Search Recipes</label>
+            <input name="search-input" id="search-input" type="text"
+              placeholder="Searching by keyword (Required Field)" />
+          </div>
+          <!--Meal Type dropdown -->
+          <div class="row columns">
+            <label>Meal Type</label>
+            <select id="meal-input">
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+              <option value="snack">Snack</option>
+            </select>
+          </div>
+          <!--Health Label selection dropdown -->
+          <div class="row columns">
+            <div class="healthlabel">
+              <label>Health Option</label>
+              <select id="health-input">
+                <option value="alcohol-free">Alcohol-free</option>
+                <option value="celery-free">Celery-free</option>
+                <option value="crustacean-free">Crustacean-free</option>
+                <option value="dairy-free">Dairy-free</option>
+                <option value="egg-free">Egg-free</option>
+                <option value="fish-free">Fish-free</option>
+                <option value="gluten-free">Gluten-free</option>
+                <option value="keto">Keto</option>
+                <option value="kidney friendly">Kidney friendly</option>
+                <option value="low potassium">Low potassium</option>
+                <option value="lupine-free">Lupine-free</option>
+                <option value="mustard-free">Mustard-free</option>
+                <option value="no oil added">No oil added</option>
+                <option value="no-sugar">No-sugar</option>
+                <option value="peanut-free">Peanut-free </option>
+                <option value="pescatarian">Pescatarian </option>
+                <option value="pork-free">Pork-free </option>
+                <option value="red meat-free">Red meat-free </option>
+                <option value="sesame-free">Sesame-free </option>
+                <option value="shellfish-free">Shellfish-free</option>
+                <option value="soy-free">Soy-free</option>
+                <option value="sugar-conscious">Sugar-conscious</option>
+                <option value="tree-Nut-free">Tree-Nut-free</option>
+                <option value="vegan">Vegan</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="wheat-free">Wheat-free</option>
               </select>
-            </div>  
-              <!--Health Label selection dropdown -->
-              <div class="row columns">
-                <div class="healthlabel">
-                  <label>Health Option</label>
-                  <select id="health-input"> 
-                    <option value="alcohol-free">Alcohol-free</option>
-                    <option value="celery-free">Celery-free</option>
-                    <option value="crustacean-free">Crustacean-free</option>
-                    <option value="dairy-free">Dairy-free</option>
-                    <option value="egg-free">Egg-free</option>
-                    <option value="fish-free">Fish-free</option>
-                    <option value="gluten-free">Gluten-free</option>
-                    <option value="keto">Keto</option>
-                    <option value="kidney friendly">Kidney friendly</option>
-                    <option value="low potassium">Low potassium</option>
-                    <option value="lupine-free">Lupine-free</option>
-                    <option value="mustard-free">Mustard-free</option>
-                    <option value="no oil added">No oil added</option>
-                    <option value="no-sugar">No-sugar</option>
-                    <option value="peanut-free">Peanut-free </option>
-                    <option value="pescatarian">Pescatarian </option>
-                    <option value="pork-free">Pork-free </option>
-                    <option value="red meat-free">Red meat-free </option>
-                    <option value="sesame-free">Sesame-free </option>
-                    <option value="shellfish-free">Shellfish-free</option>
-                    <option value="soy-free">Soy-free</option>
-                    <option value="sugar-conscious">Sugar-conscious</option>
-                    <option value="tree-Nut-free">Tree-Nut-free</option>
-                    <option value="vegan">Vegan</option>
-                    <option value="vegetarian">Vegetarian</option>
-                    <option value="wheat-free">Wheat-free</option>
-                  </select>
-                </div>
+            </div>
+          </div>
+          <!--Calorie requirements -->
+          <div class="row ">
+            <label class="columns small-12">Required Calories (Input maximum desired calories per serving)</label>
+            <div class="columns small-6">
+              <input id="calorie-input" type="number" min="0" name="min" placeholder="kcal">
+            </div>
+            <!--Form Submit button -->
+            <div class="row columns">
+              <div class="columns">
+                <button id="submit-btn" type="submit" class="primary button search-button">
+                  Search
+                </button>
               </div>
-              <!--Calorie requirements -->
-              <div class="row ">
-                <label class="columns small-12">Required Calories (Input maximum desired calories per serving)</label>
-                <div class="columns small-6">
-                  <input id="calorie-input" type="number" min="0" name="min" placeholder="kcal">
-                </div>
-                <!--Form Submit button -->
-                <div class="row columns">
-                  <div class="columns">
-                    <button id="submit-btn" type="submit" class="primary button search-button">
-                      Search
-                    </button>
-                  </div>  
-                </div>  
-              </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <!--Main section content-->
-    
-    <div id="recipe-container" class="grid-x main-section">
-      <div class="row small-up-2 medium-up-3 card-container">
-        <div class="column">
-          <div class="card">
-            <img src="https://www.edamam.com/web-img/e42/e42f9119813e890af34c259785ae1cfb.jpg" alt="Chicken Vesuvio Recipe" width="300" height="300">
-            <div class="card-divider">
-              <h4>Chicken Vesuvio</h4>
-            </div>
-            <div class="card-divider">
-              <h4>Ingredients</h4>
-              <p>1/2 cup olive oil<br>
-                5 cloves garlic, peeled<br>
-                2 large russet potatoes, peeled and cut into chunks<br>
-                1 3-4 pound chicken, cut into 8 pieces (or 3 pound chicken legs)<br>
-                3/4 cup white wine<br>
-                3/4 cup chicken stock<br>
-                3 tablespoons chopped parsley<br>
-                1 tablespoon dried oregano<br>
-                Salt and pepper<br>
-                1 cup frozen peas, thawed</p>
-              <p><a target="_blank" href="https://www.seriouseats.com/chicken-vesuvio-recipe">Instructions</a></p>  
             </div>
           </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <img src="https://www.edamam.com/web-img/7a2/7a2f41a7891e8a8f8a087a96930c6463.jpg" alt="Grilled Butterflied Chicken Recipe" width="300" height="300">
-            <div class="card-divider">
-             <h4>Grilled Butterflied Chicken (Paleo Diet)</h4> 
-            </div>
-            <div class="card-divider">
-              <h4>Ingredients</h4>
-              <p>1 whole chicken, 3 1/2 to 4 pounds<br>
-                Kosher salt and freshly ground black pepper</p>
-                <p><a target="_blank" href="http://www.seriouseats.com/recipes/2012/08/grilled-butterflied-chicken-recipe.html">Instructions</a></p>
-            </div>
-          </div>
-        </div>
-       <div class="column">
-          <div class="card">
-            <img src="https://www.edamam.com/web-img/af6/af6990002e0005b92cdda145b0514a07.jpg" alt="Low-Carb Breakfast Wraps" width="300" height="300">
-            <div class="card-divider">
-              <h4>Low-Carb Breakfast Wraps</h4> 
-            </div>
-            <div class="card-divider">
-              <h4>Ingredients</h4>
-              <p>4 large eggs<br>
-                1/4 c. milk<br>
-                1 tbsp. butter<br>
-                6 breakfast sausages, cooked according to package instructions<br>
-                1 1/2 c. shredded cheddar, divided<br>
-                1 avocado, cut into thin slices<br>
-                1/2 c. grape tomatoes, quartered<br>
-                kosher salt<br>
-                Freshly ground black pepper<br>
-                1 tbsp. Chopped chives</p>
-                <p><a target="_blank" href="https://www.delish.com/cooking/recipe-ideas/recipes/a57866/low-carb-breakfast-wraps-recipe/">Instructions</a></p>
-            </div>
-          </div>
-        </div>
-      </div>  
-    </div>
-    <!--Footer-->
-    <div class="top-bar"style="height:65px;">
-      <div class="top-bar-left">
-        
-      </div>
-      <div class="top-bar-right">
-        &copy; 2021 NUTRIQUOTIENT
+        </form>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script>$(document).foundation();</script>
-    <script src="./assets/js/script.js"></script>
-  </body>
+  </div>
+  <!--Main section content-->
+
+  <div id="recipe-container" class="grid-x main-section">
+    <div id="results" class="row small-up-2 medium-up-3 card-container">
+
+    </div>
+  </div>
+  <!--Footer-->
+  <div class="top-bar" style="height:65px;">
+    <div class="top-bar-left">
+
+    </div>
+    <div class="top-bar-right">
+      &copy; 2021 NUTRIQUOTIENT
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+  <script>$(document).foundation();</script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
 </html>
