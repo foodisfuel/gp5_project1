@@ -3,7 +3,7 @@
     --secondary-color:rgba(178, 209, 193, 0.8);
 }
 
-.top-bar{
+.top-bar, .top-bar ul{
     background-color:var(--primary-color);
 }
 
@@ -20,7 +20,7 @@ a {
     background-color:var(--primary-color);
 }
 
-.menu li {
+.menu ul li {
     background-color:var(--primary-color);
 }
 
@@ -29,6 +29,7 @@ a {
     background-image: url("../images/SFrsbG.jpg");
     background-size: cover;
 }
+
 .row {
   max-width: 100%;
   margin-left: 20px;

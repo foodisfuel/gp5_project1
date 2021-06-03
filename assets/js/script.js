@@ -35,6 +35,7 @@ var formSubmitHandler = function (event) {
     }
 
     getRecipes();
+    userFormEl.reset();
 };
 
 // function to request data from the api
