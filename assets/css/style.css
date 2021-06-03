@@ -76,6 +76,7 @@ a {
 
 
   .card{
+    background-color: #fefefe;
     border:1px solid rgba(79, 80, 79, 0.8);
     padding: 20px;
     text-align: center;
