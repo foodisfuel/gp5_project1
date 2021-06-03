@@ -27,70 +27,67 @@
     <div class="grid-container fluid">
       <div class="grid-y jumbotron" style="height:650px;">
         <div class="translucent-form-overlay float-right">
-          <form>
-            <h3>Input Information</h3>
+          <form id="input-form">
+            <h3>Recipe Search</h3>
             <!--Search by term -->
             <div class="row columns">
-              <label>Search Recipes
-              <input id="search-term" type="text" name="search" placeholder="Searching by keyword">
-              </label>
+              <label>Search Recipes</label>
+              <input name="search-input" id="search-input" type="text" placeholder="Searching by keyword (Required Field)" />
             </div>
             <!--Meal Type dropdown -->
             <div class="row columns">
-              <label>Meal Type
-                <select>
-                  <option value="breakfast">Breakfast</option>
-                  <option value="lunch">Lunch</option>
-                  <option value="dinner">Dinner</option>
-                  <option value="snack">Snack</option>
-                </select>
-              </label>
+              <label>Meal Type</label>
+              <select id="meal-input">
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snack">Snack</option>
+              </select>
             </div>  
               <!--Health Label selection dropdown -->
               <div class="row columns">
                 <div class="healthlabel">
-                  <label>Health Options (Holddown ctrl button to select multiple)</label>
-                      <select multiple>
-                        <option value="alcohol-free">Alcohol-free</option>
-                        <option value="celery-free">Celery-free</option>
-                        <option value="crustacean-free">Crustacean-free</option>
-                        <option value="dairy-free">Dairy-free</option>
-                        <option value="egg-free">Egg-free</option>
-                        <option value="fish-free">Fish-free</option>
-                        <option value="gluten-free">Gluten-free</option>
-                        <option value="keto">Keto</option>
-                        <option value="kidney friendly">Kidney friendly</option>
-                        <option value="low potassium">Low potassium</option>
-                        <option value="lupine-free">Lupine-free</option>
-                        <option value="mustard-free">Mustard-free</option>
-                        <option value="no oil added">No oil added</option>
-                        <option value="no-sugar">No-sugar</option>
-                        <option value="peanut-free">Peanut-free </option>
-                        <option value="pescatarian">Pescatarian </option>
-                        <option value="pork-free">Pork-free </option>
-                        <option value="red meat-free">Red meat-free </option>
-                        <option value="sesame-free">Sesame-free </option>
-                        <option value="shellfish-free">Shellfish-free</option>
-                        <option value="soy-free">Soy-free</option>
-                        <option value="sugar-conscious">Sugar-conscious</option>
-                        <option value="tree-Nut-free">Tree-Nut-free</option>
-                        <option value="vegan">Vegan</option>
-                        <option value="vegetarian">Vegetarian</option>
-                        <option value="wheat-free">Wheat-free</option>
-                      </select>
-                  </label>
+                  <label>Health Option</label>
+                  <select id="health-input"> 
+                    <option value="alcohol-free">Alcohol-free</option>
+                    <option value="celery-free">Celery-free</option>
+                    <option value="crustacean-free">Crustacean-free</option>
+                    <option value="dairy-free">Dairy-free</option>
+                    <option value="egg-free">Egg-free</option>
+                    <option value="fish-free">Fish-free</option>
+                    <option value="gluten-free">Gluten-free</option>
+                    <option value="keto">Keto</option>
+                    <option value="kidney friendly">Kidney friendly</option>
+                    <option value="low potassium">Low potassium</option>
+                    <option value="lupine-free">Lupine-free</option>
+                    <option value="mustard-free">Mustard-free</option>
+                    <option value="no oil added">No oil added</option>
+                    <option value="no-sugar">No-sugar</option>
+                    <option value="peanut-free">Peanut-free </option>
+                    <option value="pescatarian">Pescatarian </option>
+                    <option value="pork-free">Pork-free </option>
+                    <option value="red meat-free">Red meat-free </option>
+                    <option value="sesame-free">Sesame-free </option>
+                    <option value="shellfish-free">Shellfish-free</option>
+                    <option value="soy-free">Soy-free</option>
+                    <option value="sugar-conscious">Sugar-conscious</option>
+                    <option value="tree-Nut-free">Tree-Nut-free</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="wheat-free">Wheat-free</option>
+                  </select>
                 </div>
               </div>
               <!--Calorie requirements -->
               <div class="row ">
                 <label class="columns small-12">Required Calories (Input maximum desired calories per serving)</label>
                 <div class="columns small-6">
-                  <input id="calories" type="number" min="0" name="min" placeholder="kcal">
+                  <input id="calorie-input" type="number" min="0" name="min" placeholder="kcal">
                 </div>
                 <!--Form Submit button -->
                 <div class="row columns">
                   <div class="columns">
-                    <button id="submit" type="button" class="primary button search-button">
+                    <button id="submit-btn" type="submit" class="primary button search-button">
                       Search
                     </button>
                   </div>  
@@ -102,7 +99,7 @@
     </div>
     <!--Main section content-->
     
-    <div id="main" class="grid-x main-section">
+    <div id="recipe-container" class="grid-x main-section">
       <div class="row small-up-2 medium-up-3 card-container">
         <div class="column">
           <div class="card">
@@ -122,7 +119,7 @@
                 1 tablespoon dried oregano<br>
                 Salt and pepper<br>
                 1 cup frozen peas, thawed</p>
-              <p><a href="https://www.seriouseats.com/chicken-vesuvio-recipe">Instructions</a></p>  
+              <p><a target="_blank" href="https://www.seriouseats.com/chicken-vesuvio-recipe">Instructions</a></p>  
             </div>
           </div>
         </div>
@@ -136,19 +133,29 @@
               <h4>Ingredients</h4>
               <p>1 whole chicken, 3 1/2 to 4 pounds<br>
                 Kosher salt and freshly ground black pepper</p>
-                <p><a href="http://www.seriouseats.com/recipes/2012/08/grilled-butterflied-chicken-recipe.html">Instructions</a></p>
+                <p><a target="_blank" href="http://www.seriouseats.com/recipes/2012/08/grilled-butterflied-chicken-recipe.html">Instructions</a></p>
             </div>
           </div>
         </div>
        <div class="column">
           <div class="card">
-            <img src="http://placehold.it/500X300" width = 100%>
+            <img src="https://www.edamam.com/web-img/af6/af6990002e0005b92cdda145b0514a07.jpg" alt="Low-Carb Breakfast Wraps" width="300" height="300">
             <div class="card-divider">
-              This is a header
+              <h4>Low-Carb Breakfast Wraps</h4> 
             </div>
             <div class="card-divider">
-              <h4>This is a card.</h4>
-              <p>This is some text</p>
+              <h4>Ingredients</h4>
+              <p>4 large eggs<br>
+                1/4 c. milk<br>
+                1 tbsp. butter<br>
+                6 breakfast sausages, cooked according to package instructions<br>
+                1 1/2 c. shredded cheddar, divided<br>
+                1 avocado, cut into thin slices<br>
+                1/2 c. grape tomatoes, quartered<br>
+                kosher salt<br>
+                Freshly ground black pepper<br>
+                1 tbsp. Chopped chives</p>
+                <p><a target="_blank" href="https://www.delish.com/cooking/recipe-ideas/recipes/a57866/low-carb-breakfast-wraps-recipe/">Instructions</a></p>
             </div>
           </div>
         </div>
@@ -160,13 +167,12 @@
         
       </div>
       <div class="top-bar-right">
-        
+        &copy; 2021 NUTRIQUOTIENT
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
+    <script>$(document).foundation();</script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

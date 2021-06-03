@@ -1,5 +1,6 @@
 :root{
     --primary-color:rgba(87, 161, 124, 0.8);
+    --secondary-color:rgba(178, 209, 193, 0.8);
 }
 
 .top-bar{
@@ -66,7 +67,7 @@ a {
 
   .main-section{
     padding: 30px 0px;
-    background-color:rgba(178, 209, 193, 0.8);
+    background-color:var(--secondary-color);
   }
 
 

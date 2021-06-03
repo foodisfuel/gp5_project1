@@ -4,60 +4,57 @@
 // THREE ***: OUTSOURCE
 
 // VARIABLES:
-// ENTIRE FORM SECTION *
-var userFormEl = document.querySelector('');
+// add event listener to form element
+var userFormEl = document.querySelector('#input-form');
 
-// FORM INPUTS *
-// SEARCH INPUT FROM FORM *
-var searchInputEl = document.querySelector(''); 
-// MEAL-TYPE INPUT FROM FORM *
-var mealInputEl = document.querySelector('');
-// HEALTH-TYPE INPUT FROM FORM *
-var healthInputEl = document.querySelector('');
-// CALORIE AMOUNT FROM FORM *
-var calInputEl = document.querySelector('');
+// form inputs
+var searchInputEl = document.querySelector('#search-input'); 
+var calInputEl = document.querySelector('#calorie-input');
+var mealInputEl = document.querySelector('#meal-input').value;
+var healthInputEl = document.querySelector('#health-input').value;
 
-// VARIABLE FOR ENTIRE SHOWCASE/RECIPE SECTION *
-var recipeContainerEl = document.querySelector('');
+// main/recipe section
+var recipeContainerEl = document.querySelector('#recipe-container');
 
-// function to get user input from form, OR PROVIDE AN ALERT TO HELP WITH COMPLETION
+// function to get user input from the form, or provide an alert to help with completion
 var formSubmitHandler = function(event) {
     // prevent page from reloading when submit button is clicked
     event.preventDefault();
 
-    // GET THE USER'S SEARCH INPUT, IS .TRIM() NEEDED HERE? ***
-    var searchTerm = searchInputEl.value.trim();
-    // if user submitted a searchTerm, pass it as an argument to getRecipes 
-    if (searchTerm) {
-        getRecipes(searchTerm);
-        // reset input field to blank after submit
-        searchInputEl.value = '';
-    } else {
+    var searchInputEl = document.querySelector('#search-input').value; 
+    var calInputEl = document.querySelector('#calorie-input').value;
+
+    // if user submitted a searchInputEl, pass it as an argument to getRecipes 
+    if (!searchInputEl) {
         // if user did not fill out anything, prompt them to do so
         alert('Please enter a food you would like to include in your recipe!');
+    } else {
+        // reset input fields after submitting form
+        searchInputEl.value = '';
+        calInputEl.value = 0;
     }
 
-    // GET THE USER'S INPUT
-    var mealLabel = mealInputEl.value();
-    // SEND  VALUE TO getRecipes FUNCTION
-    getRecipes(mealLabel);
-
-    var healthLabel = healthInputEl.value();
-    getRecipes(healthLabel);
-
-    var calLabel = calInputEl.value();
-    getRecipes(calLabel);
+    getRecipes();
 };
 
 // function to request data from the api
-var getRecipes = function(food, meal, health, calories) {
-    var getRecipe = 'https://api.edamam.com/search?q=' + searchTerm + '&app_key=$d57f32b0&mealType=' + mealLabel + '$health=' + healthLabel + '&calories=' + calLabel + '';
+var getRecipes = function() {
+    // work-around for [object%20HTMLInputElement] problem 
+    var food = searchInputEl.value;
+    var calories = calInputEl.value;
+
+    var apiUrl = 'https://api.edamam.com/search?q=' + food + '&app_id=$d57f32b0&app_key=$368e27d7e44f2844bc9bdbd02eb0eb32&mealType=' + mealInputEl + '$health=' + healthInputEl + '&calories=' + calories;
+
+    console.log(apiUrl)
+
     // make request to the url
-    fetch(getRecipe).then(function(response) {
+    fetch(apiUrl, {
+        mode: "no-cors"
+    }).then(function(response) {
         // request was successful
         if (response.ok) {
             response.json().then(function(data) {
-                displayRecipes(data, food, meal, health, calories);
+                displayRecipes(data);
             });            
         } else {
             // request was unsuccessful 
@@ -80,7 +77,7 @@ var displayRecipes = function(recipes) {
     // clear old data. DOES THIS ALSO CLEAR EXISTING DATA?
     recipeContainerEl.textContent = '';
     // CLEAR ENTIRE SHOWCASE SECTION BELOW HERO/FORM ***
-    recipeContainerEl
+    // recipeContainerEl
     // NEED SOLUTION ***
 
     // loop over recipes
@@ -113,7 +110,6 @@ var displayRecipes = function(recipes) {
             // NEED SOLUTION ***
         };
         
-
         // append title to container
         recipeEl.appendChild(titleEl);
 
@@ -128,5 +124,4 @@ var displayRecipes = function(recipes) {
 };
 
 // event listener for form submission
-// BUTTON TYPE SHOULD BE EQUALED TO 'SUBMIT'
 userFormEl.addEventListener('submit', formSubmitHandler);
