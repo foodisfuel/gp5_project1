@@ -1,190 +1,220 @@
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root{
+  --primary-color:rgba(87, 161, 124, 0.8);
+  --secondary-color:rgba(178, 209, 193, 0.8);
 }
 
-  body {
-    margin-top: 50px;
-    padding: 10px;
-    text-align: justify;
-  
+.top-bar{
+  background-color:var(--primary-color);
+}
+
+.menu-text{
+  background-color:var(--primary-color);
+}
+
+a {
+  background-color:var(--primary-color);
+  color: black;
+}
+
+.top-bar-right{
+  background-color:var(--primary-color);
+}
+
+.menu li {
+  background-color:var(--primary-color);
+}
+
+.jumbotron {
+  /*Image from https://wallpapersafari.com/w/SFrsbG*/
+  background-image: url("../images/SFrsbG.jpg");
+  background-size: cover;
+}
+
+
+/*-------form styling--------------*/
+.translucent-form-overlay {
+  max-width: 800px;
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 20px;
+  color: #fefefe;
+  margin: 60px;
+}
+
+.:root{
+    --primary-color:rgba(87, 161, 124, 0.8);
+    --secondary-color:rgba(178, 209, 193, 0.8);
+}
+
+.top-bar{
+    background-color:var(--primary-color);
+}
+
+.menu-text{
+    background-color:var(--primary-color);
+}
+
+a {
+    background-color:var(--primary-color);
+    color: black;
+}
+
+.top-bar-right{
+    background-color:var(--primary-color);
+}
+
+.menu li {
+    background-color:var(--primary-color);
+}
+
+.jumbotron {
+    /*Image from https://wallpapersafari.com/w/SFrsbG*/
+    background-image: url("../images/SFrsbG.jpg");
+    background-size: cover;
+}
+.main-section{
+  padding: 30px 0px;
+  background-color:var(--secondary-color);
+}
+.row {
+  max-width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/*-------form styling--------------*/
+.translucent-form-overlay {
+    max-width: 700px;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 20px;
+    color: #fefefe;
+    margin: 60px;
   }
 
-<!--About Us-->
-.about-us {
-    padding: 100px;
+  .translucent-form-overlay .columns.row {
+    display: block;
+  }
+  
+  .translucent-form-overlay h3, .translucent-form-overlay label {
+    color: #fefefe;
+  }
+  
+  .translucent-form-overlay input, .translucent-form-overlay select {
+    color: #8a8a8a;
+  }
+  
+  .translucent-form-overlay input::-webkit-input-placeholder {
+    color: #8a8a8a;
+  }
+  
+  .translucent-form-overlay input:-ms-input-placeholder {
+    color: #8a8a8a;
+  }
+  
+  .translucent-form-overlay input::placeholder {
+    color: #8a8a8a;
+  }
+
+  .main-section{
+    padding: 30px 0px;
+    background-color:var(--secondary-color);
+  }
+
+/*Contact us map area*/
+.form-overlay{
+  max-width: 700px;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 10px 190px;
+    color: #fefefe;
+    margin: 60px;
     text-align: center;
 }
 
+.contact-us-list{
+  list-style-type: none;
+}
+
+
+
+/* Testimonial styling*/
 
 .testimonial-block-vertical-quote {
-    background: rgba(23, 121, 186, 0.25);
-    padding: 1rem;
-    border-radius: 0;
-    margin-bottom: 1.875rem;
-    position: relative;
-  }
-  
-  .testimonial-block-vertical-quote p {
-    margin-bottom: 0;
-  }
-  
-  .testimonial-block-vertical-quote::after {
-    content: '';
-    bottom: -1.25rem;
-    left: 2.25rem;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 1.25rem 1.125rem 0 1.125rem;
-    border-color: rgba(23, 121, 186, 0.25) transparent transparent transparent;
-    position: absolute;
-  }
-  
-  .testimonial-block-vertical-person {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 1.65rem;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  
-  .testimonial-block-vertical-avatar {
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-  }
-  
-  .testimonial-block-vertical-name {
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 0;
-    margin-left: 0.65rem;
-  }
-  
-  .testimonial-block-vertical-info {
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #8a8a8a;
-    margin-bottom: 0;
-    margin-left: 0.65rem;
-  }
-  
-  
+  background: var(--primary-color);
+  padding: 1rem;
+  border-radius: 0;
+  margin-bottom: 1.875rem;
+  position: relative;
+}
 
+.testimonial-block-vertical-quote p {
+  margin-bottom: 0;
+}
 
+.testimonial-block-vertical-quote::after {
+  content: '';
+  bottom: -1.25rem;
+  left: 2.25rem;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 1.25rem 1.125rem 0 1.125rem;
+  border-color: rgba(23, 121, 186, 0.25) transparent transparent transparent;
+  position: absolute;
+}
 
+.testimonial-block-vertical-person {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 1.65rem;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
-<!--Contact Us-->
+.testimonial-block-vertical-avatar {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
 
-.contact-us-section {
-    padding: 2rem;
-    background: #fefefe;
-  }
-  
-  .contact-us-section .contact-us-section-left {
-    padding-right: 2rem;
-    border-bottom: 2px solid #e6e6e6;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  @media print, screen and (min-width: 40em) {
-    .contact-us-section .contact-us-section-left {
-      border-right: 1px solid #e6e6e6;
-      border-bottom: 0;
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
-  }
-  
-  .contact-us-section .contact-us-section-right {
-    padding-left: 2rem;
-  }
-  
-  @media print, screen and (min-width: 40em) {
-    .contact-us-section .contact-us-section-right {
-      border-left: 1px solid #e6e6e6;
-    }
-  }
-  
-  .contact-us-section .contact-us-header {
-    margin-bottom: 2rem;
-  }
-  
-  @media screen and (min-width: 40em) and (max-width: 74.9375em) {
-    .contact-us-section .contact-us-header {
-      font-size: 32px;
-    }
-  }
-  
-  .contact-us-section .responsive-embed {
-    margin-bottom: 0;
-    padding-bottom: 55%;
-  }
-  
-  .contact-us-form input[type=text],
-  .contact-us-form input[type=email],
-  .contact-us-form textarea {
-    margin-bottom: 1.5rem;
-  }
-  
-  .contact-us-form-actions {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  
-  .contact-us-form-actions input[type=submit] {
-    border-radius: 5000px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  
-  .contact-us-form-actions .contact-us-file-button {
-    background: transparent;
-    color: #8a8a8a;
-  }
-  
-  .contact-us-list {
-    list-style-type: none;
-    margin: 0;
-  }
-  
-  .contact-us-list li a {
-    color: #0a0a0a;
-  }
-  
-  .contact-us-list li::before {
-    margin-right: 2rem;
-    font-size: 2rem;
-    vertical-align: middle;
-    color: #8a8a8a;
-    font-family: 'FontAwesome';
-  }
-  
-  .contact-us-list .address::before {
-    content: '\f041';
-    margin-left: 0.4rem;
-    margin-right: 2.3rem;
-  }
-  
-  .contact-us-list .email::before {
-    content: '\f003';
-  }
-  
-  .contact-us-list .phone::before {
-    content: '\f098';
-  }
-  
-  
+.testimonial-block-vertical-name {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-left: 0.65rem;
+}
+
+.testimonial-block-vertical-info {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #8a8a8a;
+  margin-bottom: 0;
+  margin-left: 0.65rem;
+}
+
+.translucent-form-overlay .columns.row {
+display: block;
+}
+
+.translucent-form-overlay h3, .translucent-form-overlay label {
+color: #fefefe;
+}
+
+.translucent-form-overlay input, .translucent-form-overlay select {
+color: #8a8a8a;
+}
+
+.translucent-form-overlay input::-webkit-input-placeholder {
+color: #8a8a8a;
+}
+
+.translucent-form-overlay input:-ms-input-placeholder {
+color: #8a8a8a;
+}
+
+.translucent-form-overlay input::placeholder {
+color: #8a8a8a;
+}
+
