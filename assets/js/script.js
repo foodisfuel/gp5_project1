@@ -43,18 +43,14 @@ var getRecipes = function() {
     var food = searchInputEl.value;
     var calories = calInputEl.value;
 
-    var apiUrl = 'https://api.edamam.com/search?q=' + food + '&app_id=$d57f32b0&app_key=$368e27d7e44f2844bc9bdbd02eb0eb32&mealType=' + mealInputEl + '$health=' + healthInputEl + '&calories=' + calories;
-
-    console.log(apiUrl)
+    var apiUrl = 'https://api.edamam.com/search?app_id=d57f32b0&app_key=368e27d7e44f2844bc9bdbd02eb0eb32&q=' + food + '&mealType=' + mealInputEl + '&health=' + healthInputEl + '&calories=0-' + calories;
 
     // make request to the url
-    fetch(apiUrl, {
-        mode: "no-cors"
-    }).then(function(response) {
+    fetch(apiUrl).then(function(response) {
         // request was successful
         if (response.ok) {
             response.json().then(function(data) {
-                displayRecipes(data);
+                console.log(data);
             });            
         } else {
             // request was unsuccessful 
