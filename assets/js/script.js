@@ -51,7 +51,7 @@ var getRecipes = function () {
         if (response.ok) {
             response.json().then(function (data) {
                 var recipes = data;
-                console.log(recipes);
+                document.querySelectorAll('.column').forEach(item => item.remove());
                 for (i = 0; i < 9; i++) {
 
                     //create html elements
