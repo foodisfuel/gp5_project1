@@ -20,7 +20,7 @@ a {
   background-color:var(--primary-color);
 }
 
-.menu li {
+.top-bar, .top-bar ul {
   background-color:var(--primary-color);
 }
 
@@ -41,8 +41,6 @@ a {
   margin: 60px;
 }
 
-
-
 .top-bar{
     background-color:var(--primary-color);
 }
@@ -60,8 +58,8 @@ a {
     background-color:var(--primary-color);
 }
 
-.menu li {
-    background-color:var(--primary-color);
+.menu ul li {
+  background-color:var(--primary-color);
 }
 
 .jumbotron {
@@ -215,3 +213,27 @@ color: #8a8a8a;
 color: #8a8a8a;
 }
 
+@media screen and (max-width: 817px) {
+  .translucent-form-overlay {
+    padding: 10px;
+    margin: 0px;
+}
+
+.translucent-form-overlay {
+  margin-top: 15px;
+}
+.column, .columns {
+  width: 100%;
+  float: left;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  padding-bottom: 0.9375rem;
+}
+.form-overlay {
+ 
+  padding: 0px;
+  margin: 0px;
+  margin-top:15px;
+  
+}
+}
