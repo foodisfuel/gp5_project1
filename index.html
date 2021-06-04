@@ -29,7 +29,6 @@
   <div class="grid-container fluid">
     <div class="grid-y jumbotron" style="height:650px;">
       <div class="translucent-form-overlay float-right">
-
         <form id="input-form">
           <h3>Recipe Search</h3>
           <!--Search by term -->
@@ -83,7 +82,7 @@
             </div>
           </div>
           <!--Calorie requirements -->
-          <div class="row ">
+          <div class="row columns">
             <label class="columns small-12">Required Calories (Input maximum desired calories per serving)</label>
             <div class="columns small-6">
               <input id="calorie-input" type="number" min="0" name="min" placeholder="kcal">
@@ -104,7 +103,8 @@
   <!--Main section content-->
 
   <div id="recipe-container" class="grid-x main-section">
-    <div id="results" class="row small-up-2 medium-up-3 card-container">
+    <!--Small device 1 column per row, medium device 2 columns per row, large device 3 columns per row-->
+    <div id="results" class="row small-up-1 medium-up-2 large-up-3 card-container">
 
     </div>
   </div>

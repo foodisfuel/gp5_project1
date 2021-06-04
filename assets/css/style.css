@@ -36,10 +36,14 @@ a {
   margin-right: 20px;
 }
 
+.row.columns {
+  margin-left: 0px;
+}
+
 /*-------form styling--------------*/
 .translucent-form-overlay {
-    max-width: 500px;
-    width: 100%;
+    max-width: 550px;
+    /*width: 100%;*/
     background-color: var(--primary-color);
     padding: 20px;
     color: #fefefe;
@@ -70,6 +74,13 @@ a {
     color: #8a8a8a;
   }
 
+  .column, .columns {
+    width: 100%;
+    float: left;
+    padding-left: 0;
+    padding-right: 0;
+}
+
   .main-section{
     padding: 30px 0px;
     background-color:var(--secondary-color);
@@ -81,6 +92,7 @@ a {
     border:1px solid rgba(79, 80, 79, 0.8);
     padding: 20px;
     text-align: center;
+    margin: 10px;
   }
 
   .card-divider{
@@ -142,4 +154,15 @@ a {
     color: #8a8a8a;
     margin-bottom: 0;
     margin-left: 0.65rem;
+  }
+
+  @media screen and (max-width: 575px) {
+    .translucent-form-overlay {
+      padding: 10px;
+      margin: 10px;
+    }
+
+    .row.columns {
+      padding: 0px;
+    }
   }
