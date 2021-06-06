@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NUTRIQUOTIENT | Welcome</title>
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- Start Top Bar -->
+  <div class="top-bar stacked-for-medium">
+    <div class="top-bar-left">
+      <ul class="menu">
+        <li class="menu-text">NUTRIQUOTIENT</li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><a href="./aboutus.html">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Top Bar -->
+  <!-- Start of Jumbotron with input form-->
+  <div class="grid-container fluid">
+    <div class="grid-y jumbotron" style="height:650px;">
+      <div class="translucent-form-overlay float-right">
+        <form id="input-form">
+          <h3>Recipe Search</h3>
+          <!--Search by term -->
+          <div class="row columns">
+            <label>Search Recipes</label>
+            <input name="search-input" id="search-input" type="text"
+              placeholder="Searching by keyword (Required Field)" />
+          </div>
+          <!--Meal Type dropdown -->
+          <div class="row columns">
+            <label>Meal Type</label>
+            <select id="meal-input">
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+              <option value="snack">Snack</option>
+            </select>
+          </div>
+          <!--Health Label selection dropdown -->
+          <div class="row columns">
+            <div class="healthlabel">
+              <label>Health Option</label>
+              <select id="health-input">
+                <option value="alcohol-free">Alcohol-free</option>
+                <option value="celery-free">Celery-free</option>
+                <option value="crustacean-free">Crustacean-free</option>
+                <option value="dairy-free">Dairy-free</option>
+                <option value="egg-free">Egg-free</option>
+                <option value="fish-free">Fish-free</option>
+                <option value="gluten-free">Gluten-free</option>
+                <option value="keto">Keto</option>
+                <option value="kidney friendly">Kidney friendly</option>
+                <option value="low potassium">Low potassium</option>
+                <option value="lupine-free">Lupine-free</option>
+                <option value="mustard-free">Mustard-free</option>
+                <option value="no oil added">No oil added</option>
+                <option value="no-sugar">No-sugar</option>
+                <option value="peanut-free">Peanut-free </option>
+                <option value="pescatarian">Pescatarian </option>
+                <option value="pork-free">Pork-free </option>
+                <option value="red meat-free">Red meat-free </option>
+                <option value="sesame-free">Sesame-free </option>
+                <option value="shellfish-free">Shellfish-free</option>
+                <option value="soy-free">Soy-free</option>
+                <option value="sugar-conscious">Sugar-conscious</option>
+                <option value="tree-Nut-free">Tree-Nut-free</option>
+                <option value="vegan">Vegan</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="wheat-free">Wheat-free</option>
+              </select>
+            </div>
+          </div>
+          <!--Calorie requirements -->
+          <div class="row columns">
+            <label class="columns small-12">Required Calories (Input maximum desired calories per serving)</label>
+            <div class="columns small-6">
+              <input id="calorie-input" type="number" min="0" name="min" placeholder="kcal">
+            </div>
+            <!--Form Submit button -->
+            <div class="row columns">
+              <div class="columns">
+                <button id="submit-btn" type="submit" class="primary button search-button">
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--Main section content-->
+
+  <div id="recipe-container" class="grid-x main-section">
+    <!--Small device 1 column per row, medium device 2 columns per row, large device 3 columns per row-->
+    <div id="results" class="row small-up-1 medium-up-2 large-up-3 card-container">
+
+    </div>
+  </div>
+  <!--Footer-->
+  <div class="top-bar" style="height:65px;">
+    <div class="top-bar-left">
+
+    </div>
+    <div class="top-bar-right">
+      &copy; 2021 NUTRIQUOTIENT
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+  <script>$(document).foundation();</script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
