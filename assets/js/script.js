@@ -46,7 +46,7 @@ var getRecipes = function () {
     var calories = calInputEl.value;
     
 
-    var apiUrl = 'https://api.edamam.com/search?app_id=d57f32b0&app_key=368e27d7e44f2844bc9bdbd02eb0eb32&q=' + food + '&mealType=' + mealInputEl + healthInputEl + '&calories=0-' + calories;
+    var apiUrl = 'https://api.edamam.com/search?app_id=d57f32b0&app_key=368e27d7e44f2844bc9bdbd02eb0eb32&q=' + food + '&mealType=' + mealInputEl + '&health=' + healthInputEl + '&calories=0-' + calories;
     
     
      
