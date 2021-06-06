@@ -6,7 +6,7 @@ var userFormEl = document.querySelector('#input-form');
 var searchInputEl = document.querySelector('#search-input');
 var calInputEl = document.querySelector('#calorie-input');
 var mealInputEl = document.querySelector('#meal-input').value;
-//var healthInputEl = document.querySelector('#health-input').value;
+var healthInputEl = document.querySelector('#health-input').value;
 
 
 
@@ -20,7 +20,7 @@ var formSubmitHandler = function (event) {
 
     var searchInputEl = document.querySelector('#search-input').value;
     var calInputEl = document.querySelector('#calorie-input').value;
-    //var healthInputEl = $('#health-input').text();
+    
    
 
     // if user submitted a searchInputEl, pass it as an argument to getRecipes 
@@ -46,20 +46,7 @@ var getRecipes = function () {
     var calories = calInputEl.value;
     
 
-   function healthInputEl() {
-    var selected = [];
-    for (var option of document.getElementById('health-input').options)
-    {
-        if (option.selected) {
-            selected.push(option.value);
-       }
-   }
-    for (var i = 0; i < selected.length; i++) {
-          '&health=' + selected[i];
-      }
-  }
-
-    var apiUrl = 'https://api.edamam.com/search?app_id=d57f32b0&app_key=368e27d7e44f2844bc9bdbd02eb0eb32&q=' + food + '&mealType=' + mealInputEl + healthInputEl() + '&calories=0-' + calories;
+    var apiUrl = 'https://api.edamam.com/search?app_id=d57f32b0&app_key=368e27d7e44f2844bc9bdbd02eb0eb32&q=' + food + '&mealType=' + mealInputEl + healthInputEl + '&calories=0-' + calories;
     
     
      
