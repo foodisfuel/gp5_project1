@@ -51,7 +51,7 @@
           <div class="row columns">
             <div class="healthlabel">
               <label>Health Option</label>
-              <select id="health-input">
+              <select id="health-input" multiple>
                 <option value="alcohol-free">Alcohol-free</option>
                 <option value="celery-free">Celery-free</option>
                 <option value="crustacean-free">Crustacean-free</option>
@@ -59,13 +59,13 @@
                 <option value="egg-free">Egg-free</option>
                 <option value="fish-free">Fish-free</option>
                 <option value="gluten-free">Gluten-free</option>
-                <option value="keto">Keto</option>
+                <option value="keto-friendly">Keto-friendly</option>
                 <option value="kidney friendly">Kidney friendly</option>
                 <option value="low potassium">Low potassium</option>
                 <option value="lupine-free">Lupine-free</option>
                 <option value="mustard-free">Mustard-free</option>
                 <option value="no oil added">No oil added</option>
-                <option value="no-sugar">No-sugar</option>
+                <option value="Sugar-Conscious">Sugar-Conscious</option>
                 <option value="peanut-free">Peanut-free </option>
                 <option value="pescatarian">Pescatarian </option>
                 <option value="pork-free">Pork-free </option>
@@ -84,7 +84,7 @@
           <!--Calorie requirements -->
           <div class="row columns">
             <label class="columns small-12">Required Calories (Input maximum desired calories per serving)</label>
-            <div class="columns small-6">
+            <div class="columns small-6 cal-input">
               <input id="calorie-input" type="number" min="0" name="min" placeholder="kcal">
             </div>
             <!--Form Submit button -->
@@ -99,6 +99,23 @@
         </form>
       </div>
     </div>
+  </div>
+  <div class="reveal" id="searchalert" data-reveal>
+    <h3>Required Field </h3>
+    <p>Searching by key word is a required field</p>
+    <p>Example: Chicken, Beef, rice etc.</p>
+    <button class="close-button" data-close aria-label="Close window" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="reveal" id="noresults" data-reveal>
+    <h3>Required Field </h3>
+    <p>Searching by key word is a required field</p>
+    <p>Example: Chicken, Beef, rice etc.</p>
+    <button class="close-button" data-close aria-label="Close window" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
   </div>
   <!--Main section content-->
 
