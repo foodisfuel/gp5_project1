@@ -1,5 +1,9 @@
 # NUTRIQUOTIENT
 
+##Technology used
+Javascript, JQuery, HTML, CSS, Zurb Foundation (CSS).
+API used - https://developer.edamam.com/edamam-docs-recipe-api
+
 ## How To Use
 
 Website URL:https://foodisfuel.github.io/gp5_project1/
