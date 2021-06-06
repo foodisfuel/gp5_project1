@@ -1,8 +1,8 @@
 # NUTRIQUOTIENT
 
-##Technology used
-Javascript, JQuery, HTML, CSS, Zurb Foundation (CSS).
-API used - https://developer.edamam.com/edamam-docs-recipe-api
+## Technology used
+1.Javascript, JQuery, HTML, CSS, Zurb Foundation (CSS).
+2.API used - https://developer.edamam.com/edamam-docs-recipe-api
 
 ## How To Use
 
