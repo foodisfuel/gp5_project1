@@ -6,7 +6,9 @@ var userFormEl = document.querySelector('#input-form');
 var searchInputEl = document.querySelector('#search-input');
 var calInputEl = document.querySelector('#calorie-input');
 var mealInputEl = document.querySelector('#meal-input').value;
-var healthInputEl = document.querySelector('#health-input').value;
+//var healthInputEl = document.querySelector('#health-input').value;
+
+
 
 // main/recipe section
 var recipeContainerEl = document.querySelector('#recipe-container');
@@ -18,11 +20,15 @@ var formSubmitHandler = function (event) {
 
     var searchInputEl = document.querySelector('#search-input').value;
     var calInputEl = document.querySelector('#calorie-input').value;
+    //var healthInputEl = $('#health-input').text();
+   
 
     // if user submitted a searchInputEl, pass it as an argument to getRecipes 
     if (!searchInputEl) {
         // if user did not fill out anything, prompt them to do so
-        alert('Please enter a food you would like to include in your recipe!');
+        //alert('Please enter a food you would like to include in your recipe!');
+        $('#searchalert').foundation('toggle');
+
     } else {
         // reset input fields after submitting form
         searchInputEl.value = '';
@@ -38,14 +44,33 @@ var getRecipes = function () {
     // work-around for [object%20HTMLInputElement] problem 
     var food = searchInputEl.value;
     var calories = calInputEl.value;
+    
 
-    var apiUrl = 'https://api.edamam.com/search?app_id=d57f32b0&app_key=368e27d7e44f2844bc9bdbd02eb0eb32&q=' + food + '&mealType=' + mealInputEl + '&health=' + healthInputEl + '&calories=0-' + calories;
+   function healthInputEl() {
+    var selected = [];
+    for (var option of document.getElementById('health-input').options)
+    {
+        if (option.selected) {
+            selected.push(option.value);
+       }
+   }
+    for (var i = 0; i < selected.length; i++) {
+          '&health=' + selected[i];
+      }
+  }
+
+    var apiUrl = 'https://api.edamam.com/search?app_id=d57f32b0&app_key=368e27d7e44f2844bc9bdbd02eb0eb32&q=' + food + '&mealType=' + mealInputEl + healthInputEl() + '&calories=0-' + calories;
+    
+    
+     
 
     // make request to the url
     fetch(apiUrl).then(function (response) {
         // request was successful
         if (response.ok) {
             response.json().then(function (data) {
+                console.log(data);
+                console.log(food);
                 var recipes = data;
                 document.querySelectorAll('.column').forEach(item => item.remove());
                 for (i = 0; i < 9; i++) {
@@ -103,12 +128,14 @@ var getRecipes = function () {
             });
         } else {
             // request was unsuccessful 
-            alert('Error: No Recipes Found');
+            //alert('Error: No Recipes Found');
+            $('#noresults').foundation('toggle');
         }
     })
         // if '.then' method fails, fetch() will use the '.catch' method below
         .catch(function (error) {
-            alert('Unable to connect to Edamam Recipe API');
+            //alert('Unable to connect to Edamam Recipe API');
+            $('#connectionerror').foundation('toggle');
         });
 };
 

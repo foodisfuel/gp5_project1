@@ -3,6 +3,10 @@
     --secondary-color:rgba(178, 209, 193, 0.8);
 }
 
+.reveal {
+  background-color:var(--secondary-color);
+  color:#fefefe;
+}
 .top-bar, .top-bar ul{
     background-color:var(--primary-color);
 }
